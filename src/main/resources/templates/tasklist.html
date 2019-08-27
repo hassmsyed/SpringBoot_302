@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Job Form</title>
+</head>
+<body>
+<h1>Task List</h1>
+<a href="/addtask">Add a Task</a><br />
+<div th:each="toDo : ${tasks}">
+    <h4 th:inline="text">[[${toDo.name}]] due at [[${toDo.dueDate}]] <br />
+        with a priority of [[${toDo.priority}]]</h4>
+
+</div>
+</body>
+</html>
